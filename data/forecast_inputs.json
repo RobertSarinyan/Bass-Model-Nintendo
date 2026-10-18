@@ -1,0 +1,21 @@
+{
+  "information_cutoff": "2025-05-09",
+  "launch_date": "2025-06-05",
+  "launch_source_id": "N2025LAUNCH",
+  "first_period_end": "2026-03-31",
+  "first_period_target_million_units": 15.0,
+  "target_source_id": "N2025",
+  "target_source_page": 9,
+  "target_status": "Nintendo management forecast published May 8 2025; not actual sales",
+  "analogue_reported_lifetime_million_units": 152.12,
+  "lifetime_source_id": "N2025",
+  "lifetime_source_page": 27,
+  "final_forecast_period_end": "2035-03-31",
+  "design_note": "Ten fiscal reporting periods show the modeled rise, peak and decline; the horizon is an analyst choice, not a factual prediction of console lifetime.",
+  "base_assumptions": {
+    "q": "Transfer the historical primary-fit q unchanged as an analogue assumption.",
+    "M": "Use historical fitted M as an analogue-based hardware-volume benchmark, not an independent measurement of Switch 2 market size.",
+    "p": "Solve for p so that interval sales from launch to March 31 2026 match Nintendo's pre-launch 15 million-unit forecast."
+  },
+  "scenario_note": "Lower / upper cases combine source-based market-size benchmarks with omission-diagnostic q values. Recalibrate p to the same first-period target in each case. These are constructed sensitivity cases, not confidence bounds or minimum / maximum feasible sales."
+}

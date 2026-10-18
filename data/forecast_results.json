@@ -1,0 +1,48 @@
+{
+  "information_cutoff": "2025-05-09",
+  "launch_date": "2025-06-05",
+  "first_period_days": 300,
+  "calibration_target_million_units": 15.0,
+  "parameters": {
+    "lower": {
+      "p_per_year": 0.10773465613822282,
+      "q_per_year": 0.3916293336819279,
+      "M_million_units": 152.12
+    },
+    "base": {
+      "p_per_year": 0.0944966990323263,
+      "q_per_year": 0.46425642564867203,
+      "M_million_units": 167.29390222504836
+    },
+    "upper": {
+      "p_per_year": 0.09036978832629582,
+      "q_per_year": 0.5122261207218292,
+      "M_million_units": 171.18419209409382
+    }
+  },
+  "summaries": {
+    "lower": {
+      "peak_fiscal_year_end": 2028,
+      "peak_period_sales_millions": 24.03689823233546,
+      "final_cumulative_millions": 147.02814367652144
+    },
+    "base": {
+      "peak_fiscal_year_end": 2029,
+      "peak_period_sales_millions": 27.451507328543514,
+      "final_cumulative_millions": 163.28132217971077
+    },
+    "upper": {
+      "peak_fiscal_year_end": 2029,
+      "peak_period_sales_millions": 29.57165737553683,
+      "final_cumulative_millions": 168.15879005391164
+    }
+  },
+  "unchanged_analogue_first_period_millions": 10.481038601262007,
+  "first_period_is_calibrated_not_independently_predicted": true,
+  "scenario_interpretation": "Lower / upper cases combine source-based market-size benchmarks with omission-diagnostic q values. Recalibrate p to the same first-period target in each case. These are constructed sensitivity cases, not confidence bounds or minimum / maximum feasible sales.",
+  "market_potential_logic": {
+    "established_analogue_volume_millions": 152.12,
+    "base_increment_over_established_volume_millions": 15.173902225048352,
+    "assumption": "Comparable long-run platform hardware volume; no claim that each earlier buyer upgrades."
+  }
+}

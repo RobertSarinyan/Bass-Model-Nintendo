@@ -1,0 +1,67 @@
+{
+  "model": "Continuous-time Bass, exact reporting-interval increments, zero adoption at launch",
+  "objective": "Unweighted nonlinear least squares on period sales in millions",
+  "constraints": {
+    "p_q_min_per_year": 1e-08,
+    "p_q_max_per_year": 10.0,
+    "M_min_millions": 152.13000100000002,
+    "M_max_millions": 100152.13
+  },
+  "time_convention": "Actual calendar days / 365.25; end dates made exclusive",
+  "primary": {
+    "p_per_year": 0.06496632980028655,
+    "q_per_year": 0.46425642564867203,
+    "M_million_units": 167.29390222504836,
+    "n_fit_observations": 9,
+    "SSE_million_units_squared": 31.89345060773568,
+    "RMSE_million_units": 1.8824762240710646,
+    "MAE_million_units": 1.6376866674989072,
+    "R_squared_period_sales": 0.9276879080968635,
+    "starts_attempted": 27,
+    "starts_converged": 27,
+    "starts_within_1e_6_of_best_SSE": 27,
+    "numerical_bound_hit": false,
+    "optimality": 0.00016238694697078766,
+    "R_squared_full_year_intervals": 0.8680385709458017,
+    "fitted_cumulative_at_last_observation_millions": 150.06163326481195,
+    "instantaneous_peak_years_since_launch": 3.7159549323968575,
+    "instantaneous_peak_date_approx": "2020-11-19"
+  },
+  "launch_conditioned_check": {
+    "description": "April 1 2017 initial condition N0=2.74 million; fit the next eight intervals",
+    "p_per_year": 0.059337041745462026,
+    "q_per_year": 0.4722723628619446,
+    "M_million_units": 168.84384484583106,
+    "n_fit_observations": 8,
+    "SSE_million_units_squared": 28.408618677612886,
+    "RMSE_million_units": 1.8844302413996679,
+    "MAE_million_units": 1.6196262575061555,
+    "R_squared_period_sales": 0.8680986604637078,
+    "starts_attempted": 27,
+    "starts_converged": 27,
+    "starts_within_1e_6_of_best_SSE": 27,
+    "numerical_bound_hit": false,
+    "optimality": 4.556962872794341e-05
+  },
+  "leave_one_period_out_parameter_ranges": {
+    "p_per_year": [
+      0.0576909433406573,
+      0.07060492577012045
+    ],
+    "q_per_year": [
+      0.3916293336819279,
+      0.5122261207218292
+    ],
+    "M_million_units": [
+      161.56839748287825,
+      171.18419209409382
+    ]
+  },
+  "diagnostic_note": "No sensitivity fit is an out-of-sample Switch 2 forecast; all keep the same observed-total lower bound for M.",
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7"
+  }
+}

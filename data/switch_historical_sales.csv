@@ -1,0 +1,10 @@
+fiscal_year_end,period_start,period_end,observation_start,is_partial_launch_period,geography,product_scope,measure,reported_sales_ten_thousands,sales_units,sales_millions,reported_lifetime_units_if_available,source_id,source_page
+2017,2016-04-01,2017-03-31,2017-03-03,true,Global,Original Nintendo Switch platform family,Hardware sell-in,274,2740000,2.74,2740000,N2017,15
+2018,2017-04-01,2018-03-31,2017-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,1505,15050000,15.05,,N2019,14
+2019,2018-04-01,2019-03-31,2018-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,1695,16950000,16.95,34740000,N2019,14
+2020,2019-04-01,2020-03-31,2019-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,2103,21030000,21.03,,N2021,14
+2021,2020-04-01,2021-03-31,2020-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,2883,28830000,28.83,84590000,N2021,14
+2022,2021-04-01,2022-03-31,2021-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,2306,23060000,23.06,,N2023,14
+2023,2022-04-01,2023-03-31,2022-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,1797,17970000,17.97,125620000,N2023,14
+2024,2023-04-01,2024-03-31,2023-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,1570,15700000,15.70,,N2025,27
+2025,2024-04-01,2025-03-31,2024-04-01,false,Global,Original Nintendo Switch platform family,Hardware sell-in,1080,10800000,10.80,152120000,N2025,27

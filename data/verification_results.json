@@ -1,0 +1,26 @@
+{
+  "numeric_checks": "passed",
+  "historical_observations": 9,
+  "forecast_observations": 30,
+  "local_sources": 8,
+  "max_ODE_difference_million_units": {
+    "historical": 1.0187792298665954e-07,
+    "launch_conditioned": 5.970686345335707e-08,
+    "lower": 6.406286701121644e-08,
+    "base": 7.884827368798142e-08,
+    "upper": 6.200831137448404e-08
+  },
+  "holdout_evaluation": [
+    {
+      "fiscal_year_end": "2026",
+      "forecast_millions": 15.000000000001483,
+      "actual_millions": 19.86,
+      "forecast_minus_actual_millions": -4.859999999998516,
+      "absolute_percentage_error": 24.47129909364812,
+      "actual_source_id": "N2026",
+      "actual_source_page": "5",
+      "role": "Evaluation only; no refitting"
+    }
+  ],
+  "rounding_difference_annual_sum_minus_reported_lifetime_units": 10000
+}
