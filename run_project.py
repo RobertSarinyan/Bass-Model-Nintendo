@@ -1,4 +1,3 @@
-"""Reproduce the complete homework with the currently active Python environment."""
 import analyze_bass
 import forecast_switch2
 import verify_project
