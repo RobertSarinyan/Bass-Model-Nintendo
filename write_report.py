@@ -1,4 +1,3 @@
-"""Compose the report from checked result files; no manually copied estimates."""
 import json
 from analyze_bass import ROOT, DATA
 from verify_project import read_rows
