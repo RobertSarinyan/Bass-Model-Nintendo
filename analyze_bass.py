@@ -1,6 +1,5 @@
 """Prepare historical sales, fit the interval Bass model, and export results.
 
-Run from any directory: python analyze_bass.py
 This script estimates the historical Switch model only, not Switch 2 adoption.
 """
 from pathlib import Path
@@ -21,7 +20,7 @@ import matplotlib.pyplot as plt
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / 'data'
 IMG = ROOT / 'img'
-YEAR_DAYS = 365.25  # Explicit elapsed-time convention, not a sales assumption.
+YEAR_DAYS = 365.25
 LAUNCH = date(2017, 3, 3)
 PLOT_STYLE = {'font.family': 'DejaVu Sans', 'font.size': 10,
               'axes.spines.top': False, 'axes.spines.right': False,
@@ -150,7 +149,6 @@ def main():
                          'fitted_cumulative_millions': float(cumulative(ends[i], p, q, m))})
     write_csv(DATA / 'switch_bass_fit.csv', fit_rows)
 
-    # Stability diagnostics, not candidate models selected by their apparent fit.
     conditioned, _ = fit_intervals(starts[1:] - ends[0], ends[1:] - ends[0],
                                            y[1:], total, initial=float(y[0]))
     sensitivity = []
