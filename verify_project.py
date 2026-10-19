@@ -1,4 +1,4 @@
-"""Scientific consistency and source checks; writes a separate holdout evaluation."""
+"""Scientific consistency and source checks, writes a separate holdout evaluation."""
 import csv
 import json
 import re
@@ -87,7 +87,6 @@ def verify_numbers():
             assert abs(running-float(row['cumulative_hardware_units_millions'])) < 1e-8
             assert running < forecasts['parameters'][name]['M_million_units']
 
-    # Later actuals are read here only, after forecast parameters and values exist.
     actuals = read_rows('switch2_validation_actual.csv')
     baseline = read_rows('switch2_forecast.csv')
     evaluations = []
@@ -106,7 +105,6 @@ def verify_numbers():
                             'role': 'Evaluation only; no refitting'})
     write_csv(DATA / 'switch2_validation.csv', evaluations)
     evaluation = evaluations[0]
-    # The figure must look the same in a standalone check and in the full run.
     plt.rcParams.update(PLOT_STYLE)
     fig, ax = plt.subplots(figsize=(7, 3.3), layout='constrained')
     values = [evaluation['forecast_millions'], evaluation['actual_millions']]
@@ -145,8 +143,6 @@ def verify_report():
         assert required in text, required
     assert len(pdf.pages) > 1
     expected_figures = len(re.findall(r'!\[.*?\]\(.*?\)', markdown))
-    # WeasyPrint shares its image resource dictionary across pages. Count unique
-    # objects rather than counting that same dictionary once for every page.
     image_ids = {im.indirect_reference.idnum for p in pdf.pages for im in p.images}
     assert len(image_ids) == expected_figures, 'Unexpected raster images, possibly equations'
     assert '/StructTreeRoot' in pdf.trailer['/Root'], 'PDF reading structure missing'
@@ -161,7 +157,6 @@ def verify_report():
             if operator == b'BDC' and len(operands) == 2 and '/ActualText' in operands[1]:
                 raise AssertionError('Old replacement-text equation spans remain')
     assert formula_fonts, 'Typeset equation fonts missing'
-    # Check visible equation text, not just a substitute string embedded in PDF.
     equation_page = next(p for p in pdf.pages if '5.1 Model' in p.extract_text())
     equation_text = ''.join(equation_page.extract_text().split())
     for fragment in ['dN(t)', 'N(b)', 'N(a)', 'exp(']:
