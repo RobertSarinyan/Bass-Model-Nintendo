@@ -1,8 +1,3 @@
-"""Build the report with Python-Markdown, mdx_math, KaTeX HTML and WeasyPrint.
-
-KaTeX runs locally in Node before WeasyPrint, which cannot execute JavaScript.
-Equations remain HTML font text, rather than raster images or SVG paths.
-"""
 from html import escape, unescape
 import json
 import os
@@ -85,12 +80,9 @@ def typeset_math(body):
 
     def replace(match):
         tag = 'div' if match['display'] else 'span'
-        # No hidden MathML or replacement ActualText span: visible font text is
-        # also the selectable text. WeasyPrint lays out and groups it itself.
         html = next(rendered).replace(' aria-hidden="true"', '')
         return f'<{tag} class="equation">{html}</{tag}>'
 
-    # Display math gets its own block, not a div nested inside a paragraph.
     body = re.sub(r'<p>\s*(<script type="math/tex; mode=display">.*?</script>)\s*</p>',
                   r'\1', body, flags=re.S)
     return pattern.sub(replace, body)
@@ -106,7 +98,6 @@ def make_html(source):
         return f'<figure><img {match[1]}><figcaption>{caption}</figcaption></figure>'
 
     body = re.sub(r'<p><img\s+([^>]*?)/?>\s*</p>', figure, body)
-    # Reference URLs stay clickable without long URL strings overflowing lines.
     body = re.sub(r'(?<!["=])(https://[^\s<>]+)',
                   lambda m: f'<a href="{escape(m[0], quote=True)}">[Source]</a>', body)
     return f'''<!doctype html>
